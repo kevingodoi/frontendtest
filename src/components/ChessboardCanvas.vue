@@ -158,11 +158,12 @@ const drawAllSquares = (
 
 const drawLabelsOnSquares = (squareSize: number, context: CanvasContext) => {
   // Define the column labels to be displayed on the chessboard
-  const columnLabels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
   // Draw the column labels on the chessboard
   for (let columnIndex = 0; columnIndex < NUMBER_OF_SQUARES; columnIndex++) {
-    // Define the position of the column label
-    const columnLabel = columnLabels[columnIndex]
+    // Generates a column label (a, b, c, etc.) based on the column index.
+    // Uses the String.fromCharCode function to convert a number into a Unicode character.
+    // The Unicode for the letter 'a' is 97, so we add the column index to 97 to get the column label.
+    const columnLabel = String.fromCharCode(97 + columnIndex)
     // Calculate the position of the column label
     const labelX = (columnIndex + LABEL_OFFSET_PROPORTION) * squareSize
     // Calculate the position of the row label

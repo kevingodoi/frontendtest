@@ -4,6 +4,7 @@
     <div class="row-square">{{ square }}</div>
   </div>
 </template>
+
 <script setup lang="ts">
 import { defineProps } from 'vue'
 
@@ -14,6 +15,7 @@ const { clickIndex, square, isSelected } = defineProps<{
   isSelected?: boolean
 }>()
 </script>
+
 <style scoped>
 .table-item {
   position: relative;
